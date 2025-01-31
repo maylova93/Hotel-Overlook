@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+$font: "Open Sans";
+$hoverColor: red;
+
+
+.cardRoom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 90vw;
+  margin: 2rem auto 6rem;
+  max-width: 1200px;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.roomItem {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 400px;
+  border-radius: 5px;
+  justify-self: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: white;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:hover .title {
+    color: $hoverColor; /* 🎯 Bliver rød ved hover */
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+.sectionWrapper {
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 4rem auto 6rem;
+}
+
+.sectionTitle {
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.roomImg {
+  width: 100%;
+  display: block;
+}
+
+/* 🎯 Titel sidder fast over billedet */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 🎯 Titel altid sort, men bliver rød ved hover */
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+}
+
+/* 🎯 Ved hover ændrer titel farve */
+.roomItem:hover .title {
+  color: $hoverColor;
+}
+
+/* 🎯 Beskrivelsen vises kun ved hover */
+.desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.roomItem:hover .desc {
+  opacity: 1;
+  max-height: 100px;
+}

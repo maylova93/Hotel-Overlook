@@ -1,0 +1,94 @@
+.dashboardContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .heading {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .subheading {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .reservationList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .reservationItem {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+  }
+  
+  .noReservations {
+    font-size: 18px;
+    color: #777;
+    margin-top: 15px;
+  }
+  
+
+  .backButton {
+    margin-top: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ff0000, #cc0000);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .backButton:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+
+  @media (max-width: 768px) {
+    .dashboardContainer {
+      padding: 20px; 
+    }
+  
+    .heading {
+      font-size: 24px;
+    }
+  
+    .subheading {
+      font-size: 18px;
+    }
+  
+    .reservationItem {
+      font-size: 16px;
+      max-width: 100%;
+    }
+  
+    .backButton {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  }

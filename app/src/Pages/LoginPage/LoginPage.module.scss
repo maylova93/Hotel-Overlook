@@ -1,0 +1,132 @@
+
+.container {
+    display: flex;
+    min-height: 84vh;
+  
+    background-color: #f2f2f2;
+  }
+  
+  .loginSection {
+    width: 40%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .loginForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputField {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .loginButton, .cancelButton {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    background-color: red;
+    color: white;
+  }
+  
+  .loginButton {
+    background-color: red;
+    color: white;
+  }
+  
+  .loginButton:hover {
+    background-color: darkred;
+  }
+  
+  .cancelButton {
+    background-color: red;
+    color: white;
+
+  }
+  
+  .cancelButton:hover { background-color: darkred;
+  }
+  
+  .divider {
+    width: 2px;
+    background-color: #ccc;
+    height: 600px;
+ margin: auto;
+    margin-left: 20%; 
+  }
+  .rightSection {
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 20px;
+    }
+  
+    .loginSection {
+      width: 100%;
+      padding: 30px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .inputField {
+      width: 100%;
+    }
+  
+    /* ✅ Knapper forbliver på samme række med luft imellem */
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      gap: 12px; 
+      width: 100%;
+    }
+  
+    .loginButton,
+    .cancelButton {
+      flex: none;
+      width: 140px; 
+      padding: 10px;
+    }
+  
+    .divider {
+      display: none; 
+    }
+  
+    .rightSection {
+      width: 100%;
+    }
+  }

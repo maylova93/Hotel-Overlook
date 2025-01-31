@@ -1,0 +1,82 @@
+@import '../../styles/variabler.scss'; 
+
+.footer {
+  font-family: $font; 
+  width: 100%;
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 10px 5%; 
+  border-top: 1px solid #ddd;
+
+  &__copyright {
+    font-size: 0.9rem;
+    text-align: left;
+    flex: 1; 
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1; 
+
+    a {
+      color: #000;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    flex: 1;
+
+    a {
+      text-decoration: none;
+      color: #6c757d;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 1rem;
+
+    &__copyright {
+      text-align: center;
+      margin-bottom: 1rem; 
+      flex: unset; 
+    }
+
+    &__socials {
+      justify-content: center; 
+      margin-bottom: 1rem; 
+    }
+
+    &__links {
+      justify-content: center; 
+      flex-wrap: wrap; 
+      gap: 1rem;
+    }
+  }
+}
